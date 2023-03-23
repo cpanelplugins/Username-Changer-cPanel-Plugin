@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['new_primary_domain'])
     $exitCode = proc_close($process);
 
     if ($exitCode === 0) {
-        echo '<div class="alert alert-success">Your cPanel username has been changed to ' . $newPrimaryDomain . '.</div>';
+        echo '<div class="alert alert-success">Your cPanel username has been changed to ' . $newPrimaryDomain . '. You have been automatically logged out, please login with the new username.</div>';
 		echo "<script>document.getElementById('current_primary_domain').value='$newPrimaryDomain';</script>";
     } else {
         echo '<div class="alert alert-danger">Failed to change the primary domain name: ' . $stderr . '</div>';
