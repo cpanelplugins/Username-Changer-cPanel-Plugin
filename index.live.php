@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['new_primary_domain'])
     // Use the proc_open to run the WHM API1 command to change the primary domain name
     $whmApiCommand = "./wrapper {$accountName} {$_POST['new_primary_domain']}";
     
-    echo '<div class="alert alert-info">cPaenl username is being changed from ' . $accountName . ' to ' . $newPrimaryDomain . ' please allow a few seconds for the process to complete.</div>';
+    echo '<div class="alert alert-info">cPanel username is being changed from ' . $accountName . ' to ' . $newPrimaryDomain . ' please allow a few seconds for the process to complete.</div>';
 
     $descriptorspec = array(
         0 => array('pipe', 'r'), // stdin
