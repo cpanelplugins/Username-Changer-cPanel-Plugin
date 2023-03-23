@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     clearenv();
 
     char cmd[512];
-    snprintf(cmd, sizeof(cmd), "/usr/local/cpanel/base/frontend/jupiter/primary/script.sh '%s' '%s'", accountName, newPrimaryDomain);
+    snprintf(cmd, sizeof(cmd), "/usr/local/cpanel/base/frontend/jupiter/Username-Changer-cPanel-Plugin-main/script.sh '%s' '%s'", accountName, newPrimaryDomain);
 
     system(cmd);
 
